@@ -50,14 +50,17 @@ def errors_handler(func):
                 'date': datetime.datetime.now()
             }
 
-            text = "**Sorry, I encountered a error!**\n"
+            text = "**Sorry, my userbot encountered an error !!**\n"
+            
             link = "[https://t.me/PaperplaneExtendedChat](Paperplane Extended Support)"
-            text += f"If you wanna you can report it - just forward this message to {link}.\n"
-            text += "I won't log anything except the fact of error and date\n"
+            
+            text += f"If you wanna you can report it - just forward this message [here]({link}).\n"
+            text += "Don't worry, this does not contain any sensitive data.\n"
 
             ftext = "\nDisclaimer:\nThis file uploaded ONLY here, we logged only fact of error and date, "
             ftext += "we respect your privacy, you may not report this error if you've "
-            ftext += "any confidential data here, noone will see your data\n\n"
+            ftext += "any confidential data here, no one will see your data.\n\n"
+            
             ftext += "--------BEGIN USERBOT TRACEBACK LOG--------"
             ftext += "\nDate: " + date
             ftext += "\nGroup ID: " + str(errors.chat_id)
