@@ -52,7 +52,7 @@ def errors_handler(func):
 
             text = "**Sorry, my userbot encountered an error !!**\n"
             
-            link = "[https://t.me/PaperplaneExtendedChat](Paperplane Extended Support)"
+            link = "https://t.me/PaperplaneExtendedChat"
             
             text += f"If you wanna you can report it - just forward this message [here]({link}).\n"
             text += "Don't worry, this does not contain any sensitive data.\n"
