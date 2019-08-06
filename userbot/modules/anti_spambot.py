@@ -12,11 +12,12 @@ from telethon.events import ChatAction
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChannelParticipantsAdmins, Message
 
-from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, WELCOME_MUTE, bot
+from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, WELCOME_MUTE, bot, errors_handler
 from userbot.modules.admin import BANNED_RIGHTS, UNBAN_RIGHTS
 
 
 @bot.on(ChatAction)
+@errors_handler
 async def welcome_mute(welcm):
     ''' Ban a recently joined user if it matches the spammer checking algorithm. '''
     if not WELCOME_MUTE:
@@ -142,7 +143,7 @@ async def welcome_mute(welcm):
 
 
 CMD_HELP.update({
-    'welcome_mute': "If enabled in config.env or env var, \
+    'anti_spambot': "If enabled in config.env or env var, \
         this module will ban(or inform admins of the group) when \
         spammers join and match the userbot's banning algorithm."
 })
